@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+
+h1{
+    margin: 10px;
+    font-size: 5em;
+    color: #fff;
+    -webkit-text-stroke: 2px #fff;
+}
+
+h1:before{
+    content: attr(data-text);
+    position: absolute;
+    background: linear-gradient(90deg, #d630f2, #ff002f, #e4ff00, #d630f2 );
+    background-size: 300%;
+    overflow: hidden;
+    transition: width 2s;
+    animation: animate 5s linear infinite;
+    width:150px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+@keyframes animate{
+    0%
+    {
+        background-position: 0 0;
+    }
+    100%
+    {
+        background-position: 300% 0;
+    }
+}
+
+
+/* navbar*/
+.nav-menu{
+    background: linear-gradient(rgba(0, 0, 0, 0.884),rgba(7, 0, 0, 0.884));
+    padding: 20px;
+    transition: all .7s;
+}
+
+
+.menu-item{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #eee;
+    transition: color .5s;
+}
+
+.menu-item:hover{
+    color:rgb(194, 62, 62);
+}
+.nav-active{
+    color: rgb(194, 62, 62);
+}
+
+.line1 , .line2 , .line3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+ .change .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.change .line2{
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: rotate(45deg) translate(-5px,-6px)
+} 
+
+.search{
+    background: rgb(20, 20, 20);
+    border: none;
+}
+
+/* end of navbar*/
+
+
+
+
+
+
